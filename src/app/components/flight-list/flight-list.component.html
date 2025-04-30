@@ -1,0 +1,32 @@
+
+
+<body>
+
+    <section>
+        <h1>Avaiable Flights</h1>
+
+        <div class="table_component" role="region" tabindex="0">
+
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Flight Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let flight of fligths">
+                <td>{{ flight.f_code }}</td>
+                <td>{{ flight.f_name }}</td>
+                <td>{{ flight.source }}</td>
+                <td>{{ flight.destination }}</td>
+              </tr>
+            </tbody>
+          </table> 
+
+        </div>      
+
+    </section>
+</body>
