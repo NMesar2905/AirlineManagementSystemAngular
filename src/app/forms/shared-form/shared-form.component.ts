@@ -148,6 +148,7 @@ export class SharedFormComponent implements OnInit{
                 this.errorMessage = '';
                 if (typeof response === 'string'){
                   this.responseMessage =   response;
+                  this.reservationInfo = null;
                 }else{
                   this.responseMessage = 'Here is the information of your Journey'
                   this.reservationInfo =   response;
@@ -158,6 +159,7 @@ export class SharedFormComponent implements OnInit{
               },
               error: (error) => {
                 console.error('Error sending data', error);
+                this.reservationInfo = null;
                 if(error.error){
                   this.errorMessage = error.error;
                 }else{
